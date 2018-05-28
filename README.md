@@ -12,19 +12,19 @@ class EnemyManager : MonoBehaviour
 	/* Our enemy lists , since they are static , they can be called from other files like -> EnemyManager.monabotList */
 	public static List< MonaBotBaby > monabotList = new List< MonaBotBaby >();
 
-	//---------------------------------------------------------------------------------
-    // Purpose : Just Unity's callback function that will run on scene start.
-    //---------------------------------------------------------------------------------
+       //---------------------------------------------------------------------------------
+       // Purpose : Just Unity's callback function that will run on scene start.
+       //---------------------------------------------------------------------------------
 	private void Start()
 	{
 		GetMonabotsInScene();
 	}
 
-	//---------------------------------------------------------------------------------
-    // Purpose : Gets all monabots in scene.
-	//           Uses custom ObjectManager.GetSameTypeObjectsInScene function.
-	//           Uses ObjectManager.AddTypeArrayToTypeList
-    //---------------------------------------------------------------------------------
+       //---------------------------------------------------------------------------------
+       // Purpose : Gets all monabots in scene.
+       //           Uses custom ObjectManager.GetSameTypeObjectsInScene function.
+       //           Uses ObjectManager.AddTypeArrayToTypeList
+       //---------------------------------------------------------------------------------
 	private void GetMonabotsInScene()
 	{
 		MonaBotBaby[] tmp = ObjectUtils.GetSameTypeObjectsInScene< MonaBotBaby >();
